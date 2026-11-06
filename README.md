@@ -1,7 +1,17 @@
 # SecretVoice MCP Server
 
 A [Model Context Protocol](https://modelcontextprotocol.io) server for **SecretVoice** —
-expressive text-to-speech with 29 voices and 22 languages.
+intimate voice AI, not a generic TTS wrapper.
+
+Three things make it different:
+
+- **Emoji vocal cues.** Drop 👂 😮‍💨 🌬️ 🥵 💋 😭 ⏸️ into the script and the engine
+  performs it — whisper, sigh, breathless, panting, kiss, sobbing, pause. Direction
+  lives in the text instead of in a settings object.
+- **Multi-voice scenes.** One call, many speakers, each with its own voice and
+  language — dialogue, audiobook chapters, character switches.
+- **29 voices, 22 languages, tuned for closeness.** Close-mic whispers and
+  chest-voice warmth, not boardroom narration.
 
 - **Endpoint:** `https://api.secretvoice.dev/mcp`
 - **Transport:** Streamable HTTP, protocol `2025-06-18`
@@ -21,11 +31,41 @@ hour. Revoke it from your account at any time.
 |---|---|---|
 | `list_voices` | Every voice with its id and gender | `voices:read` |
 | `list_languages` | The 22 supported language codes | `voices:read` |
-| `text_to_speech` | Text in, base64 audio out (mp3, opus, wav, pcm) | `tts:generate` |
+| `text_to_speech` | Text in, base64 audio out — emoji vocal cues allowed | `tts:generate` |
+| `generate_scene` | Multi-voice scene: one clip per segment, own voice + language | `tts:generate` |
 | `get_balance` | Plan and remaining credits | `account:read` |
 | `list_history` | Recent generations | `history:read` |
 
-Resources: `secretvoice://voices`, `secretvoice://languages`.
+Resources: `secretvoice://voices`, `secretvoice://languages`, `secretvoice://vocal-cues`.
+
+## Emoji vocal cues
+
+| Cue | Effect | Cue | Effect |
+|---|---|---|---|
+| 👂 | whisper | 💋 | kiss |
+| 😮‍💨 | sigh | 🤭 | chuckle |
+| 🌬️ | breathless | 🥺 | trembling |
+| 🥵 | panting | 😭 | sobbing |
+| ⏸️ | pause | 🐢 | slowly |
+
+Anything else is stripped, so the script stays clean.
+
+## A scene in one call
+
+```json
+{
+  "name": "generate_scene",
+  "arguments": {
+    "segments": [
+      { "text": "👂 Come closer. I have been waiting all night.", "voice_id": "velvet" },
+      { "text": "😮‍💨 Ben de seni bekliyordum. 🌬️ Sadece fısılda.", "voice_id": "jade", "language_code": "tr" }
+    ]
+  }
+}
+```
+
+Returns one audio block per segment, in order, plus a JSON summary with the seconds
+and characters of each.
 
 ## Install
 
