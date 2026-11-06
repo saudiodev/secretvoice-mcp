@@ -15,6 +15,10 @@ cues, multi-voice scenes)
 |---|---|---|
 | Official MCP Registry | ✅ published `dev.secretvoice/mcp@1.0.0` | https://registry.modelcontextprotocol.io/v0.1/servers?search=secretvoice |
 | punkpeye/awesome-mcp-servers | ✅ PR #18769 | https://github.com/punkpeye/awesome-mcp-servers/pull/18769 |
+| punkpeye/awesome-remote-mcp-servers | ✅ PR #4047 | https://github.com/punkpeye/awesome-remote-mcp-servers/pull/4047 |
+| mcpservers.org | ✅ submitted, review ≤2 weeks | https://mcpservers.org |
+| heilcheng/awesome-agent-skills | ✅ PR #667 | https://github.com/heilcheng/awesome-agent-skills/pull/667 |
+| yzfly/Awesome-MCP-ZH (中文) | ✅ PR #970 | https://github.com/yzfly/Awesome-MCP-ZH/pull/970 |
 | GitHub | ✅ public repo | https://github.com/saudiodev/secretvoice-mcp |
 | PyPI (`secretvoice`) | ✅ 0.1.1 | https://pypi.org/project/secretvoice/ |
 | secretvoice.dev | ✅ `/mcp`, `/oauth`, `llms.txt`, sitemap | https://secretvoice.dev/mcp |
@@ -30,7 +34,10 @@ cues, multi-voice scenes)
 | PulseMCP | web form | https://www.pulsemcp.com/submit |
 | MCP Market | web form | https://mcpmarket.com/submit |
 | Cursor Directory | web form | https://cursor.directory/plugins/new |
-| wong2/awesome-mcp-servers | PRs disabled at the API | needs a human |
+| wong2/awesome-mcp-servers | interaction limits — PR creation blocked for outside contributors | needs the owner |
+| ComposioHQ/awesome-claude-skills | same restriction | needs the owner |
+| appcypher/awesome-mcp-servers | same restriction | needs the owner |
+| sickn33/agentic-awesome-skills | 29k-file manifest, not a README list | needs a skill directory + manifest entry |
 | APIs.guru | web form | https://apis.guru/add-api/ |
 | RapidAPI | account + listing | https://rapidapi.com |
 | Postman API Network | workspace publish | https://www.postman.com |
