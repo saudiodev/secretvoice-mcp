@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.saudiodev/secretvoice",
+  "description": "Expressive text-to-speech: 29 voices, 22 languages, OAuth 2.1 with dynamic client registration.",
+  "version": "1.0.0",
+  "websiteUrl": "https://secretvoice.dev/mcp",
+  "repository": {
+    "url": "https://github.com/saudiodev/secretvoice-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.secretvoice.dev/mcp"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "secretvoice",
+  "owner": { "name": "SecretVoice", "url": "https://secretvoice.dev" },
+  "plugins": [
+    {
+      "name": "secretvoice-tts",
+      "source": "./",
+      "description": "Expressive text-to-speech with 29 voices and 22 languages.",
+      "version": "1.0.0"
+    }
+  ]
+}

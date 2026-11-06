@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "secretvoice": { "url": "https://api.secretvoice.dev/mcp" }
+  }
+}
